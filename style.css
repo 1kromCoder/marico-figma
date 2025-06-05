@@ -4,6 +4,15 @@
   box-sizing: border-box;
   font-family: sans-serif;
 }
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 header {
   width: 100%;
   padding: 30px 20px;
@@ -23,13 +32,13 @@ header {
   /* gap: 100px; */
   justify-content: space-between;
 }
-.list {
+.list ul {
   color: #707070;
-
   display: flex;
   gap: 30px;
 }
 .list ul li {
+  text-decoration: none;
   list-style: none;
   font-size: 20px;
 }
@@ -120,21 +129,24 @@ header {
 .p > p {
   color: #707070;
 }
-
 .txt-smile-p {
+  width: 100%;
   display: flex;
-  width: 1400px;
   flex-direction: column;
   gap: 60px;
   color: white;
+  max-width: 1200px; /* optional */
+  padding: 0 20px;
   margin: 60px auto;
 }
+
 .txt-smile-p > h1 {
   font-size: 65px;
   margin: 0 auto;
 }
 .smile-p {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 150px;
 }
@@ -185,6 +197,7 @@ header {
   color: white;
   margin-top: 70px;
   display: flex;
+  /* flex-wrap: wrap; */
   gap: 50px;
 }
 .title-img > img {
@@ -241,6 +254,7 @@ header {
 .imgs-txts {
   margin-top: 100px;
   display: flex;
+  /* flex-wrap: wrap; */
   gap: 30px;
 }
 .wrapper2 {
@@ -329,4 +343,72 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .h2 {
+    font-size: 45px;
+    text-align: center;
+  }
+
+  .txt-smile-p > h1,
+  .texts > h1,
+  .hs-p > h1,
+  .hh1-hh2-h3 > h1,
+  .hh1-hh2-img > h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .txt-but-p {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .button,
+  .button2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title-img,
+  .imgs-txts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .wrapper,
+  .wrapper2 {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .texts > p {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .btn1,
+  .btn2,
+  .btn11,
+  .btn22 {
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .fotlist {
+    flex-direction: column;
+    align-items: center;
+  }
 }
